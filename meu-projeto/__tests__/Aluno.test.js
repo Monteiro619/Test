@@ -8,17 +8,17 @@ describe('Teste da classe Aluno', () => {
 
     test('2. Testar se a menção "MM" é retornada corretamente', () => {
         const aluno = new Aluno('Maria', [7, 8]);
-        expect(aluno.obterMencao()).toBe('MM');  // Corrigido para esperar 'MM'
+        expect(aluno.obterMencao()).toBe('MM');  
     });
     
     test('3. Testar se @ alun@ foi aprovad@ ou reprovad@', () => {
         const aluno = new Aluno('Ana', [8, 7]);
-        expect(aluno.statusAprovacao()).toBe('aprovad@'); // Média = 7.5 -> aprovada
+        expect(aluno.statusAprovacao()).toBe('aprovad@'); 
     });
 
     test('4. Testar para menção "SS"', () => {
         const aluno = new Aluno('Carlos', [9, 10]);
-        expect(aluno.obterMencao()).toBe('SS'); // Média = 9.5 -> 'SS'
+        expect(aluno.obterMencao()).toBe('SS'); 
     });
 
     test('5. Testar se o aluno foi aprovado com menção SS', () => {
@@ -28,7 +28,7 @@ describe('Teste da classe Aluno', () => {
 
     test('6. Testar para menção "MS"', () => {
         const aluno = new Aluno('Paula', [7, 6]);
-        expect(aluno.obterMencao()).toBe('MS'); // Corrigido para esperar 'MS'
+        expect(aluno.obterMencao()).toBe('MS'); 
     });
     
     test('7. Testar se o aluno foi aprovado com menção MM', () => {
@@ -38,7 +38,7 @@ describe('Teste da classe Aluno', () => {
 
     test('8. Testar para menção "MI"', () => {
         const aluno = new Aluno('Rafael', [4, 3]);
-        expect(aluno.obterMencao()).toBe('MI'); // Média = 3.5 -> 'MI'
+        expect(aluno.obterMencao()).toBe('MI'); 
     });
 
     test('9. Testar se o aluno foi reprovado com menção MI', () => {
@@ -71,17 +71,17 @@ describe('Teste da classe Aluno', () => {
 
     test('15. Testar se todas as notas iguais a zero retornam menção "MI"', () => {
         const aluno = new Aluno('Cecília', [0, 0]);
-        expect(aluno.obterMencao()).toBe('MI'); // Média = 0 -> 'MI'
+        expect(aluno.obterMencao()).toBe('MI'); 
     });
 
     test('16. Testar se notas muito próximas de 7 retornam a menção correta', () => {
         const aluno = new Aluno('Júlio', [6.9, 7.1]);
-        expect(aluno.obterMencao()).toBe('MM'); // Média = 7.0 -> 'MM'
+        expect(aluno.obterMencao()).toBe('MM'); 
     });
 
     test('17. Testar se uma única nota zero afeta a aprovação', () => {
         const aluno = new Aluno('Renata', [0, 10]);
-        expect(aluno.statusAprovacao()).toBe('aprovad@'); // Média = 5.0 -> aprovada
+        expect(aluno.statusAprovacao()).toBe('aprovad@'); 
     });
 
     test('18. Testar se a soma total das notas é correta', () => {
@@ -91,11 +91,11 @@ describe('Teste da classe Aluno', () => {
 
     test('19. Testar se a função aprovado funciona com menção MM', () => {
         const aluno = new Aluno('Patrícia', [6, 6]);
-        expect(aluno.statusAprovacao()).toBe('aprovad@'); // Média = 6.0 -> aprovada
+        expect(aluno.statusAprovacao()).toBe('aprovad@'); 
     });
 
     test('20. Testar se aluno com notas abaixo de 5 é reprovado', () => {
         const aluno = new Aluno('Lúcia', [3, 4]);
-        expect(aluno.statusAprovacao()).toBe('reprovad@'); // Média = 3.5 -> reprovada
+        expect(aluno.statusAprovacao()).toBe('reprovad@'); 
     });
 });
