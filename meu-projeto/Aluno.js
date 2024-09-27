@@ -2,7 +2,7 @@ class Aluno {
     constructor(nome, notas) {
         this.nome = nome;
 
-        // Validação das notas
+        // Validação
         if (!Array.isArray(notas) || notas.length === 0) {
             throw new Error('Notas devem ser um array com pelo menos uma nota.');
         }
@@ -16,7 +16,7 @@ class Aluno {
             }
         }
 
-        this.notas = notas; // Array com notas
+        this.notas = notas;
     }
 
     calcularMedia() {
@@ -26,15 +26,15 @@ class Aluno {
 
     obterMencao() {
         const media = this.calcularMedia();
-        if (media >= 9) return 'SS';  // 'SS' para média >= 9
-        if (media >= 7) return 'MM';  // 'MM' para média >= 7
-        if (media >= 5) return 'MS';  // 'MS' para média >= 5
-        return 'MI';                   // 'MI' para média < 5
+        if (media >= 9) return 'SS';  
+        if (media >= 7) return 'MM';  
+        if (media >= 5) return 'MS';  
+        return 'MI';                  
     }
 
     statusAprovacao() {
         const media = this.calcularMedia();
-        return media >= 5 ? 'aprovad@' : 'reprovad@'; // Aprovado se média >= 5
+        return media >= 5 ? 'aprovad@' : 'reprovad@'; 
     }
 }
 
